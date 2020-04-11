@@ -20,16 +20,12 @@ import java.io.IOException;
 public abstract class AbstractBaseTest {
 
     // essential setup and teardown for all tests
-
-    protected WebDriver driver;
-
     // static Extent reports class
     // to prevent nullPointerException
+    protected WebDriver driver;
     protected static ExtentTest extentTest ;
     protected static ExtentReports extentReports ;
-
     protected static ExtentHtmlReporter extentHtmlReporter ;
-
 
     @BeforeTest
     // it will create report before for all test cases in class
@@ -57,6 +53,7 @@ public abstract class AbstractBaseTest {
 
 
     @BeforeMethod
+
     // will be executed at the begining for each test case (@Test yazan heryerde)
     public void setup(){
         driver = Driver.getDriver();
