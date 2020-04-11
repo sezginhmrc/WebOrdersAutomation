@@ -21,7 +21,7 @@ public abstract class AbstractBaseTest {
 
     // essential setup and teardown for all tests
 
-    protected WebDriver driver = Driver.getDriver();
+    protected WebDriver driver;
 
     // static Extent reports class
     // to prevent nullPointerException
@@ -59,6 +59,7 @@ public abstract class AbstractBaseTest {
     @BeforeMethod
     // will be executed at the begining for each test case (@Test yazan heryerde)
     public void setup(){
+        driver = Driver.getDriver();
         driver.get(ConfigurationReader.getProperty("url"));
         driver.manage().window().maximize();
 

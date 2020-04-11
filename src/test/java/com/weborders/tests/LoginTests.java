@@ -20,5 +20,4 @@ public class LoginTests extends AbstractBaseTest{
         // if test pass it will executed
         // if test fails screenschot will be taken and sent the report
     }
-
 }
